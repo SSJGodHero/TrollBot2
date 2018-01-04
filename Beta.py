@@ -26,15 +26,16 @@ async def on_message(message):
 
     if message.content.upper() == "IS LENNY BOT HERE":
         await client.send_message(message.channel, "Maybe I am, maybe I'm not...you'll never know (⌐▀͡ ̯ʖ▀)")
-        
+
     if message.content.upper() == "TEST":
         await client.send_message(message.channel, "Passed")
-        
+
     if message.content.upper() == "GAY":
-        await client.send_message(message.channel, "No u")
-        
+        await client.send_message(message.channel, "No, you")
+
     if message.content.upper() == "HOMIE":
-        await client.send_message(message.channel, "That is not a word.")
+        await client.send_message(message.channel, "That's not a word")
+
 #Commands
 
     if message.content.startswith('/ping'):
@@ -42,7 +43,7 @@ async def on_message(message):
         await client.send_message(message.channel, "<@%s> Pong!" % (userID))
 
     if message.content.startswith('/tr'):
-        await client.send_message(message.channel, "https://youtu.be/gkTb9GP9lVI%22")
+        await client.send_message(message.channel, "https://youtu.be/gkTb9GP9lVI")
 
     if message.content.startswith('/say'):
         args = message.content.split(" ")
@@ -53,6 +54,6 @@ async def on_message(message):
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 
     if message.content.startswith('/rickroll'):
-        await client.send_message(message.channel, "This isn't a joke, I'm not sure why you typed this. Many lives are at stake... https://youtu.be/xfr64zoBTAQ%22")
+        await client.send_message(message.channel, "This isn't a joke, I'm not sure why you typed this. Many lives are at stake... https://youtu.be/xfr64zoBTAQ")
 
 client.run("Mzk3OTAyMzc2MjkzNDk4ODkx.DS3YNw.0PsItuKDCAq1owKHIiFz4gJwFvs")
