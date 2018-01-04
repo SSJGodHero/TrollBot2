@@ -42,7 +42,7 @@ async def on_message(message):
         await client.send_message(message.channel, "<@%s> Pong!" % (userID))
 
     if message.content.startswith('/tr'):
-        await client.send_message(message.channel, "https://youtu.be/gkTb9GP9lVI%22)
+        await client.send_message(message.channel, "https://youtu.be/gkTb9GP9lVI%22")
 
     if message.content.startswith('/say'):
         args = message.content.split(" ")
@@ -53,6 +53,6 @@ async def on_message(message):
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 
     if message.content.startswith('/rickroll'):
-        await client.send_message(message.channel, "This isn't a joke, I'm not sure why you typed this. Many lives are at stake... https://youtu.be/xfr64zoBTAQ%22)
+        await client.send_message(message.channel, "This isn't a joke, I'm not sure why you typed this. Many lives are at stake... https://youtu.be/xfr64zoBTAQ%22")
 
 client.run("Mzk3OTAyMzc2MjkzNDk4ODkx.DS3YNw.0PsItuKDCAq1owKHIiFz4gJwFvs")
