@@ -37,7 +37,7 @@ async def on_message(message):
         await client.send_message(message.channel, "That's not a word")
         
     if message.content.upper() == "I H8 U":
-        await client.edit_message(message, "i luf u", Embed)
+        await client.edit_message(message.content, "i luf u", Embed)
         await client.send_message(message.channel, "There c:")
 #Commands
 
