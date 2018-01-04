@@ -28,7 +28,7 @@ async def on_message(message):
         await client.send_message(message.channel, "Maybe I am, maybe I'm not...you'll never know (⌐▀͡ ̯ʖ▀)")
         
     if message.content.upper() == "TEST":
-        await client.send_message(message.channel, "Passed"
+        await client.send_message(message.channel, "Passed")
 
 #Commands
 
