@@ -29,7 +29,12 @@ async def on_message(message):
         
     if message.content.upper() == "TEST":
         await client.send_message(message.channel, "Passed")
-
+        
+    if message.content.upper() == "GAY":
+        await client.send_message(message.channel, "No u")
+        
+    if message.content.upper() == "HOMIE":
+        await client.send_message(message.channel, "That is not a word.")
 #Commands
 
     if message.content.startswith('/ping'):
