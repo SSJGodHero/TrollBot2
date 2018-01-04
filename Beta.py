@@ -1,4 +1,4 @@
-#Lenny Bot Alpha
+#Lenny Bot Beta
 
 import discord
 from discord.ext.commands import Bot
@@ -35,6 +35,13 @@ async def on_message(message):
 
     if message.content.upper() == "HOMIE":
         await client.send_message(message.channel, "That's not a word")
+
+    if message.content.upper() == "LENNY BOT ARE YOU HERE?":
+        await client.send_message(message.channel, "Good question")
+
+    if message.content.upper() == "LENNY BOT ARE YOU HERE":
+        await client.send_message(message.channel, "Good question")
+
 #Commands
 
     if message.content.startswith('/ping'):
@@ -52,7 +59,7 @@ async def on_message(message):
         #args[1:] = Hey There
         await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
 
-    if message.content.startswith('/rickroll'):
+    if message.content.startswith('/rr'):
         await client.send_message(message.channel, "This isn't a joke, I'm not sure why you typed this. Many lives are at stake... https://youtu.be/xfr64zoBTAQ")
 
-client.run("Mzk3OTAyMzc2MjkzNDk4ODkx.DS3YNw.0PsItuKDCAq1owKHIiFz4gJwFvs")
+client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
