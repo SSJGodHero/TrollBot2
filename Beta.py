@@ -6,6 +6,7 @@ from discord.ext import commands
 import asyncio
 import time
 import random
+from ftplib from FTP
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "/")
@@ -85,11 +86,7 @@ async def on_message(message):
 
     if message.content.upper() == "THANKS LENNY BOT" or message.content.upper() == "THANKS LENNY" or message.content.upper() == "THANK YOU LENNY BOT" or message.content.upper() == "THANK YOU LENNY" or message.content.upper() == "TY LENNY" or message.content.upper() == "TY LENNY BOT":
         await client.send_message(message.channel, "You're welcome :3")
-
-    if message.content.upper().startswith('HI') or message.content.upper().endswith('HI'):
-        await client.send_message(message.channel, "Bye")
-        if message.content.upper().startswith('BYE') or message.content.upper().endswith('BYE'):
-            await client.send_message(message.channel, "Hi")
+        
 
 #Commands ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -135,15 +132,15 @@ async def on_message(message):
         hassan = ["Smokin' that cookin' hot pot", "You want some beef?", "Ofc Ofc"]
         await client.send_message(message.channel, random.choice(hassan))
 
-    if message.content.startswith('/jihad'):
-        jihad = ['I love anime so much.', 'I luf u', 'Do you guys watch Grimgar?', 'I am a Saiyan', '#TeamAlex', 'Hassan. I luf u.', 'I love DBZ so much.']
-        await client.send_message(message.channel, random.choice(jihad))
-
     if message.content.startswith('/kick'):
         response = ['The person has been kicked...( ͡° ͜ʖ ͡°)', 'HHHHHHHHH no', 'Kappa']
         await client.send_message(message.channel, random.choice(response))
         if message.content.upper().endswith("LENNY BOT"):
             await client.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
+
+    if message.content.startswith('/jihad'):
+        jihad = ['I love anime so much.', 'I luf u', 'Do you guys watch Grimgar?', 'I am a Saiyan', '#TeamAlex', 'Hassan. I luf u.', 'I love DBZ so much.']
+        await client.send_message(message.channel, random.choice(jihad))
 
 #Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -158,14 +155,15 @@ async def on_message(message):
 /rr -- You're very welcome.
 /coin -- Lenny Bot flips a coin.
 /reem -- Just for you Reem.
-/jawad -- Just for your Jawad.
+/jawad -- Just for you Jawad.
 /hassan -- Just for you Hassan.
-/jihad -- Just for you Jihad.
+/jihad -- Just for you Jihad
 /dice -- Lenny Bot rolls a dice.
 /kick -- A command so you can kick someone out of the group.\n
 **NOTE: Lenny Bot is still in the beta stage, and is being worked on.**''', colour=0x3DF270))
         emb.set_author(name="Help", icon_url='https://www.lennyfaces.net/public/og-image.png')
         await client.send_message(message.channel, embed = emb)
+
 
 
 client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
