@@ -159,7 +159,7 @@ async def on_message(message):
 /dice -- Lenny Bot rolls a dice.
 /kick -- A command so you can kick someone out of the group.\n
 **NOTE: Lenny Bot is still in the beta stage, and is being worked on.**''', colour=0x3DF270))
-        emb.set_author(name="Help")
+        emb.set_author(name="Help", icon_url='https://www.lennyfaces.net/public/og-image.png')
         await client.send_message(message.channel, embed = emb)
 
 
