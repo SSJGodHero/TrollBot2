@@ -126,11 +126,26 @@ async def on_message(message):
         dice = ['1', '2', '3', '4', '5', '6']
         await client.send_message(message.channel, random.choice(dice))
 
+    if message.content.startswith('/hassan'):
+        hassan = ["Smokin' that cookin' hot pot", "You want some beef?", "Ofc Ofc"]
+        await client.send_message(message.channel, random.choice(hassan))
+
 #Help Command *****DO NOT TOUCH***** 
 
     if message.content.startswith('/help'):
-        await client.send_message(message.channel, "Lenny Bot was coded for the intention to troll, have fun and offer commands for users. Specifications on how Lenny Bot will troll will not be said...get ready to be surprised c:.\n\nCommands:\n/say <text> -- Lenny Bot repeats what you say.\n/ping -- Lenny Bot mentions you and says 'Pong!'.\n/coin -- Lenny bot flips a coin.\n/reem -- This one' special for you, Reem.\n/wow -- Gives you a youtube link c:\n/rr -- Surprise!\n/lol -- Here's a video for your troubles.\n\nNOTE: This is the beta version of Lenny Bot, more commands to come.")
-
+        await client.send_message(message.channel, '''Lenny Bot was coded for the intention of trolling, having fun, and offering commands to users. How Lenny Bot will troll won't be specified, youll have to find out on your own.
+\nCommands:\n
+/help -- Displays the list of commands for Lenny Bot.
+/ping -- Has Lenny Bot mention you and say "Pong!".
+/wow -- A video for your troubles.
+/lol -- Lenny Bot picks 1 out of the 3 random videos to display (with more to be added soon).
+/say <text> -- Type the command followed by anything you want Lenny Bot to say.
+/rr -- You're very welcome.
+/coin -- Lenny Bot flips a coin.
+/reem -- Just for you Reem.
+/jawad -- Just for your Jawad.
+/hassan -- Just for you Hassan.
+/dice -- Lenny Bot rolls a dice.''')
 
 
 client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
