@@ -122,12 +122,13 @@ async def on_message(message):
         await client.send_message(message.channel, random.choice(reem))
 
     if message.content.startswith('/jawad'):
-        jawad = ['I luf u', 'I disluf u', 'Do u luf me?', 'Nib', 'I hate anime', 'Anime is trash', 'Get rekt', 'Do you need an icepack for that burn?']
+        jawad = ['I luf u', 'I disluf u', 'Do u luf me?', 'Nib']
         await client.send_message(message.channel, random.choice(jawad))
 
     if message.content.startswith('/dice'):
+        userID = message.author.id
         dice = ['1', '2', '3', '4', '5', '6']
-        await client.send_message(message.channel, random.choice(dice))
+        await client.send_message(message.channel, '<@%s>:' %(userID) + ' ' + random.choice(dice))
 
     if message.content.startswith('/hassan'):
         hassan = ["Smokin' that cookin' hot pot", "You want some beef?", "Ofc Ofc"]
@@ -148,8 +149,7 @@ async def on_message(message):
 /reem -- Just for you Reem.
 /jawad -- Just for your Jawad.
 /hassan -- Just for you Hassan.
-/dice -- Lenny Bot rolls a dice.\n
-**NOTE: Lenny Bot is still in the Beta stage, and is being worked on.**''')
+/dice -- Lenny Bot rolls a dice.''')
 
 
 client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
