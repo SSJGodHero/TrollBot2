@@ -86,6 +86,9 @@ async def on_message(message):
         await client.delete_message(message)
         await client.send_message(message.channel, "He lufs u")
 
+    if message.content.upper() == "THANKS LENNY BOT" or message.content.upper() == "THANKS LENNY" or message.content.upper() == "THANK YOU LENNY BOT" or message.content.upper() == "THANK YOU LENNY" or message.content.upper() == "TY LENNY" or message.content.upper() == "TY LENNY BOT":
+        await client.send_message(message.channel, "You're welcome :3")
+
 #Commands ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/ping'):
