@@ -86,6 +86,11 @@ async def on_message(message):
     if message.content.upper() == "THANKS LENNY BOT" or message.content.upper() == "THANKS LENNY" or message.content.upper() == "THANK YOU LENNY BOT" or message.content.upper() == "THANK YOU LENNY" or message.content.upper() == "TY LENNY" or message.content.upper() == "TY LENNY BOT":
         await client.send_message(message.channel, "You're welcome :3")
 
+    if message.content.upper().startswith('HI') or message.content.upper().endswith('HI'):
+        await client.send_message(message.channel, "Bye")
+        if message.content.upper().startswith('BYE') or message.content.upper().endswith('BYE'):
+            await client.send_message(message.channel, "Hi")
+
 #Commands ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/ping'):
@@ -131,10 +136,10 @@ async def on_message(message):
         await client.send_message(message.channel, random.choice(hassan))
 
     if message.content.startswith('/kick'):
-        response = ['The person has been kicked...\n\n\n Sike.', 'Nib, you think you have the power?', 'Kappa.']
+        response = ['The person has been kicked...( ͡° ͜ʖ ͡°)', 'HHHHHHHHH no', 'Kappa']
         await client.send_message(message.channel, random.choice(response))
         if message.content.upper().endswith("LENNY BOT"):
-            await client.send_message(message.channel, "You can't kick me. I am *IMMORTAL*!")
+            await client.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
 
 #Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -151,8 +156,8 @@ async def on_message(message):
 /reem -- Just for you Reem.
 /jawad -- Just for your Jawad.
 /hassan -- Just for you Hassan.
-/dice -- Lenny Bot rolls a dice.\n
-/kick -- A command so you can kick someone out of the group.
+/dice -- Lenny Bot rolls a dice.
+/kick -- A command so you can kick someone out of the group.\n
 **NOTE: Lenny Bot is still in the Beta stage, and is being worked on.**''')
 
 
