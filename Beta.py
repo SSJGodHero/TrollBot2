@@ -75,11 +75,11 @@ async def on_message(message):
         come_back = ['I know you are, but what am I?', 'Is that right? And what exactly have you accomplished in your lifetime that makes you Einstein?', 'Unless your name is Google, stop acting like you know everything']
         await client.send_message(message.channel, random.choice(come_back))
 
-    if message.content.upper() == "I H8 U":
+    if message.content.upper().startswith("I H8 U") or message.content.upper().endswith("I H8 U"):
         await client.delete_message(message)
         await client.send_message(message.channel, "He lufs u")
 
-    if message.content.upper() == "I HATE U" or message.content.upper() == "I HATE YOU":
+    if message.content.upper().startswith("I HATE U") or message.content.upper().endswith("I HATE U") or message.content.upper().startswith("I HATE YOU") or message.content.upper().endswith("I HATE YOU"):
         await client.delete_message(message)
         await client.send_message(message.channel, "He lufs u")
 
