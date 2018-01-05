@@ -19,64 +19,61 @@ async def on_message(message):
 
 #Statements --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    if message.content.upper() == "SMH":
+    if message.content.upper().startswith('SMH') or message.content.upper().endswith('SMH'):
         await client.send_message(message.channel, "How about you actually shake your head instead of texting it?")
 
-    if message.content.upper() == "IS LENNY BOT HERE?":
+    if message.content.upper().startswith("IS LENNY BOT HERE?") or message.content.upper().endswith("IS LENNY BOT HERE?"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))
 
-    if message.content.upper() == "IS LENNY BOT HERE":
+    if message.content.upper().startswith("IS LENNY BOT HERE") or message.content.upper().endswith("IS LENNY BOT HERE"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))
 
-    if message.content.upper() == "TEST":
-        await client.send_message(message.channel, "Passed")
+    if message.content.upper().startswith("TEST") or message.content.upper().endswith("TEST"):
+        pass_fail = ['Passed', 'Failed']
+        await client.send_message(message.channel, random.choice(pass_fail))
 
-    if message.content.upper() == "GAY" or message.content.upper() == "YOU ARE MAD GAY" or message.content.upper() == "YOU'RE MAD GAY" or message.content.upper() == "UR MAD GAY":
+    if message.content.upper().startswith("GAY") or message.content.upper().endswith("GAY"):
         await client.send_message(message.channel, "No, you")
 
-    if message.content.upper() == "HOMIE":
+    if message.content.upper().startswith("HOMIE") or message.content.upper().endswith("HOMIE"):
         await client.send_message(message.channel, "That's not a word")
 
-    if message.content.upper() == "LENNY BOT ARE YOU HERE?":
+    if message.content.upper().startswith("LENNY BOT ARE YOU HERE?") or message.content.upper().endswith("LENNY BOT ARE YOU HERE?"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))
 
-    if message.content.upper() == "LENNY BOT ARE YOU HERE":
+    if message.content.upper().startswith("LENNY BOT ARE YOU HERE") or message.content.upper().endswith("LENNY BOT ARE YOU HERE"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))
 
-    if message.content.upper() == "LENNY ARE YOU HERE":
+    if message.content.upper().startswith("LENNY ARE YOU HERE") or message.content.upper().endswith("LENNY ARE YOU HERE"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))
 
-    if message.content.upper() == "IS LENNY HERE?":
+    if message.content.upper().startswith("IS LENNY HERE?") or message.content.upper().endswith("IS LENNY HERE?"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))
 
-    if message.content.upper() == "IS LENNY HERE":
+    if message.content.upper().startswith("IS LENNY HERE") or message.content.upper().endswith("IS LENNY HERE"):
         reply = ['No...kappa ( ͡° ͜ʖ ͡°)', 'Good question', 'I am here, now leave me alone']
         await client.send_message(message.channel, random.choice(reply))    
 
-    if message.content.upper() == "KYS":
-        await client.send_message(message.channel, "That's rude, many people commit suicide everyday and you're practically encouraging it")
+    if message.content.upper().startswith("KYS") or message.content.upper().endswith("KYS"):
+        await client.send_message(message.channel, "That's rude, you're practically encouraging suicide")
 
-    if message.content.upper() == "SMOKIN' THAT COOKIN' HOT POT":
+    if message.content.upper().startswith("SMOKIN' THAT COOKIN' HOT POT") or message.content.upper().endswith("SMOKIN' THAT COOKIN' HOT POT"):
         words2 = ['Take the pot off the stove, you could start a fire noob', 'Smoking a hot pot will give you 3rd degree burns, are you ok?']
         await client.send_message(message.channel, random.choice(words2))
 
-    if message.content.upper() == "STUPID LENNY BOT":
+    if message.content.upper().startswith("STUPID LENNY BOT") or message.content.upper().endswith("STUPID LENNY BOT"):
         come_back = ['I know you are, but what am I?', 'Is that right? And what exactly have you accomplished in your lifetime that makes you Einstein?', 'Unless your name is Google, stop acting like you know everything']
         await client.send_message(message.channel, random.choice(come_back))
 
-    if message.content.upper() == "STUPID LENNY":
+    if message.content.upper().startswith("STUPID LENNY") or message.content.upper().endswith("STUPID LENNY"):
         come_back = ['I know you are, but what am I?', 'Is that right? And what exactly have you accomplished in your lifetime that makes you Einstein?', 'Unless your name is Google, stop acting like you know everything']
         await client.send_message(message.channel, random.choice(come_back))
-
-    if message.content.upper() == "KYS LENNY BOT":
-        come_back2 = ["I would if I could but I can't", "If I were to kill myself then you will find that I will haunt your dreams"]
-        await client.send_message(message.channel, random.choice(come_back2))
 
     if message.content.upper() == "I H8 U":
         await client.delete_message(message)
@@ -122,22 +119,21 @@ async def on_message(message):
         await client.send_message(message.channel, random.choice(reem))
 
     if message.content.startswith('/jawad'):
-        jawad = ['I luf u', 'I disluf u', 'Do u luf me?', 'Nib']
+        jawad = ['I luf u', 'I disluf u', 'Do u luf me?', 'Nib', 'I hate anime', 'Anime is trash', 'Get rekt', 'Do you need an icepack for that burn?']
         await client.send_message(message.channel, random.choice(jawad))
 
     if message.content.startswith('/dice'):
-        userID = message.author.id
         dice = ['1', '2', '3', '4', '5', '6']
-        await client.send_message(message.channel, '<@%s>:' %(userID) + ' ' + random.choice(dice))
+        await client.send_message(message.channel, random.choice(dice))
 
     if message.content.startswith('/hassan'):
         hassan = ["Smokin' that cookin' hot pot", "You want some beef?", "Ofc Ofc"]
         await client.send_message(message.channel, random.choice(hassan))
 
-#Help Command *****DO NOT TOUCH***** 
+#Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/help'):
-        await client.send_message(message.channel, '''Lenny Bot was coded for the intention of trolling, having fun, and offering commands to users. How Lenny Bot will troll won't be specified, youll have to find out on your own.
+        await client.send_message(message.channel, '''Lenny Bot was coded for the intention of trolling, having fun, and offering commands to users. How Lenny Bot will troll won't be specified, you'll have to find out on your own.
 \nCommands:\n
 /help -- Displays the list of commands for Lenny Bot.
 /ping -- Has Lenny Bot mention you and say "Pong!".
@@ -149,7 +145,8 @@ async def on_message(message):
 /reem -- Just for you Reem.
 /jawad -- Just for your Jawad.
 /hassan -- Just for you Hassan.
-/dice -- Lenny Bot rolls a dice.''')
+/dice -- Lenny Bot rolls a dice.\n
+**NOTE: Lenny Bot is still in the Beta stage, and is being worked on.**''')
 
 
 client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
