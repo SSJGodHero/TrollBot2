@@ -33,7 +33,7 @@ async def on_message(message):
     if message.content.upper() == "TEST":
         await client.send_message(message.channel, "Passed")
 
-    if message.content.upper() == "GAY":
+    if message.content.upper() == "GAY" or message.content.upper() == "YOU ARE MAD GAY" or message.content.upper() == "YOU'RE MAD GAY" or message.content.upper() == "UR MAD GAY":
         await client.send_message(message.channel, "No, you")
 
     if message.content.upper() == "HOMIE":
