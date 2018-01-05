@@ -86,6 +86,11 @@ async def on_message(message):
     if message.content.upper() == "THANKS LENNY BOT" or message.content.upper() == "THANKS LENNY" or message.content.upper() == "THANK YOU LENNY BOT" or message.content.upper() == "THANK YOU LENNY" or message.content.upper() == "TY LENNY" or message.content.upper() == "TY LENNY BOT":
         await client.send_message(message.channel, "You're welcome :3")
 
+    if message.content.upper().startswith('HI') or message.content.upper().endswith('HI'):
+        await client.send_message(message.channel, "Bye")
+        if message.content.upper().startswith('BYE') or message.content.upper().endswith('BYE'):
+            await client.send_message(message.channel, "Hi")
+
 #Commands ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/ping'):
@@ -131,15 +136,15 @@ async def on_message(message):
         await client.send_message(message.channel, random.choice(hassan))
 
     if message.content.startswith('/kick'):
-        response = ['The person has been kicked...\n\n\n Sike.', 'Nib, you think you have the power?', 'Kappa.']
+        response = ['The person has been kicked...( ͡° ͜ʖ ͡°)', 'HHHHHHHHH no', 'Kappa']
         await client.send_message(message.channel, random.choice(response))
         if message.content.upper().endswith("LENNY BOT"):
-            await client.send_message(message.channel, "You can't kick me. I am *IMMORTAL*!")
+            await client.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
 
 #Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/help'):
-        await client.send_message(message.channel, '''Lenny Bot was coded for the intention of trolling, having fun, and offering commands to users. How Lenny Bot will troll won't be specified, you'll have to find out on your own.
+        emb = (discord.Embed(description='''Lenny Bot was coded for the intention of trolling, having fun, and offering commands to users. How Lenny Bot will troll won't be specified, you'll have to find out on your own.
 \nCommands:\n
 /help -- Displays the list of commands for Lenny Bot.
 /ping -- Has Lenny Bot mention you and say "Pong!".
@@ -151,9 +156,11 @@ async def on_message(message):
 /reem -- Just for you Reem.
 /jawad -- Just for your Jawad.
 /hassan -- Just for you Hassan.
-/dice -- Lenny Bot rolls a dice.\n
-/kick -- A command so you can kick someone out of the group.
-**NOTE: Lenny Bot is still in the Beta stage, and is being worked on.**''')
+/dice -- Lenny Bot rolls a dice.
+/kick -- A command so you can kick someone out of the group.\n
+**NOTE: Lenny Bot is still in the beta stage, and is being worked on.**''', colour=0x3DF270))
+        emb.set_author(name="Help")
+        await client.send_message(message.channel, embed = emb)
 
 
 client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
