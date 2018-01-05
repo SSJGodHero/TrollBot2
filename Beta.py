@@ -130,6 +130,12 @@ async def on_message(message):
         hassan = ["Smokin' that cookin' hot pot", "You want some beef?", "Ofc Ofc"]
         await client.send_message(message.channel, random.choice(hassan))
 
+    if message.content.startswith('/kick'):
+        response = ['The person has been kicked...\n\n\n Sike.', 'Nib, you think you have the power?', 'Kappa.']
+        await client.send_message(message.channel, random.choice(response))
+        if message.content.upper().endswith("LENNY BOT"):
+            await client.send_message(message.channel, "You can't kick me. I am *IMMORTAL*!")
+
 #Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/help'):
@@ -146,6 +152,7 @@ async def on_message(message):
 /jawad -- Just for your Jawad.
 /hassan -- Just for you Hassan.
 /dice -- Lenny Bot rolls a dice.\n
+/kick -- A command so you can kick someone out of the group.
 **NOTE: Lenny Bot is still in the Beta stage, and is being worked on.**''')
 
 
