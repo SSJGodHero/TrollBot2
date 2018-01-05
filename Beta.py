@@ -78,6 +78,14 @@ async def on_message(message):
         come_back2 = ["I would if I could but I can't", "If I were to kill myself then you will find that I will haunt your dreams"]
         await client.send_message(message.channel, random.choice(come_back2))
 
+    if message.content.upper() == "I H8 U":
+        await client.delete_message(message)
+        await client.send_message(message.channel, "He lufs u")
+
+    if message.content.upper() == "I HATE U" or message.content.upper() == "I HATE YOU":
+        await client.delete_message(message)
+        await client.send_message(message.channel, "He lufs u")
+
 #Commands ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/ping'):
