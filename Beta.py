@@ -131,10 +131,10 @@ async def on_message(message):
         await client.send_message(message.channel, random.choice(hassan))
 
     if message.content.startswith('/kick'):
-        response = ['The person has been kicked...\n\n\n Sike.', 'Nib, you think you have the power?', 'Kappa.']
+        response = ['The person has been kicked...( ͡° ͜ʖ ͡°)', 'HHHHHHHHH no', 'Kappa']
         await client.send_message(message.channel, random.choice(response))
         if message.content.upper().endswith("LENNY BOT"):
-            await client.send_message(message.channel, "You can't kick me. I am *IMMORTAL*!")
+            await client.send_message(message.channel, "( ͡° ͜ʖ ͡°)")
 
 #Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
