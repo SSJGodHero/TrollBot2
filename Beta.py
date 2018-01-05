@@ -118,6 +118,14 @@ async def on_message(message):
         reem = ['Go home walking, Reem :^)', 'Reem, I will give you $100 if you go home walking', 'Reem, you should be respectful to your elders you nib']
         await client.send_message(message.channel, random.choice(reem))
 
+    if message.content.startswith('/jawad'):
+        jawad = ['I luf u', 'I disluf u', 'Do u luf me?', 'Nib']
+        await client.send_message(message.channel, random.choice(jawad))
+
+    if message.content.startswith('/dice'):
+        dice = ['1', '2', '3', '4', '5', '6']
+        await client.send_message(message.channel, random.choice(dice))
+
 #Help Command *****DO NOT TOUCH***** 
 
     if message.content.startswith('/help'):
