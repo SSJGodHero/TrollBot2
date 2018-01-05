@@ -135,6 +135,10 @@ async def on_message(message):
         hassan = ["Smokin' that cookin' hot pot", "You want some beef?", "Ofc Ofc"]
         await client.send_message(message.channel, random.choice(hassan))
 
+    if message.content.startswith('/jihad'):
+        jihad = ['I love anime so much.', 'I luf u', 'Do you guys watch Grimgar?', 'I am a Saiyan', '#TeamAlex', 'Hassan. I luf u.', 'I love DBZ so much.']
+        await client.send_message(message.channel, random.choice(jihad))
+
     if message.content.startswith('/kick'):
         response = ['The person has been kicked...( ͡° ͜ʖ ͡°)', 'HHHHHHHHH no', 'Kappa']
         await client.send_message(message.channel, random.choice(response))
@@ -156,6 +160,7 @@ async def on_message(message):
 /reem -- Just for you Reem.
 /jawad -- Just for your Jawad.
 /hassan -- Just for you Hassan.
+/jihad -- Just for you Jihad.
 /dice -- Lenny Bot rolls a dice.
 /kick -- A command so you can kick someone out of the group.\n
 **NOTE: Lenny Bot is still in the beta stage, and is being worked on.**''', colour=0x3DF270))
