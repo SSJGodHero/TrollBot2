@@ -71,9 +71,16 @@ async def on_message(message):
         robbie = ['https://i.ytimg.com/vi/P3to8euoDQQ/maxresdefault.jpg', 'https://pbs.twimg.com/profile_images/688918577496231936/72BRi7c1.jpg', 'https://www.youtube.com/watch?v=PfYnvDL0Qcw', 'https://vignette.wikia.nocookie.net/abandoned-discovery-island-rp/images/7/71/Robbieroten-mainimage.jpg/revision/latest?cb=20161112204148']
         await client.send_message(message.channel, random.choice(robbie))
 
+    if message.content.startswith('/dewit'):
+        await client.send_message(message.channel, "https://pbs.twimg.com/profile_images/575699272303140864/tuvCN6-E.jpeg")
+
+    if message.content.startswith('/cheese'):
+        await client.send_message(message.channel, "https://youtu.be/HfeervqhY9Y")
+
 #Help Command *****DO NOT TOUCH***** -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if message.content.startswith('/help'):
+        user = message.author
         emb = (discord.Embed(description='''Lenny Bot was coded for the intention of trolling, having fun, and offering commands to users. How Lenny Bot will troll won't be specified, you'll have to find out on your own.
 \nCommands:\n
 /help -- Displays the list of commands for Lenny Bot.
@@ -89,10 +96,13 @@ async def on_message(message):
 /jihad -- Just for you Jihad
 /dice -- Lenny Bot rolls a dice.
 /num1 -- Who's number one?
+/dewit -- Do it.
+/cheese -- We're no strangers to cheese.
 /kick -- A command so you can kick someone out of the group.\n
-**NOTE: Lenny Bot is still in the beta stage, and is being worked on.**''', colour=0x3DF270))
+**NOTE: Lenny Bot is still in the beta stage, and is being worked on.**''', colour=0xff0000))
         emb.set_author(name="Help", icon_url='https://www.lennyfaces.net/public/og-image.png')
-        await client.send_message(message.channel, embed = emb)
+        await client.start_private_message(user)
+        await client.send_message(user, embed = emb)
 
 
 client.run("Mzk4NTUxOTUzNTEwMTA1MDg5.DTAOHA.c8W8ey-t8fZYlc7_AzgpGXl5uWM")
