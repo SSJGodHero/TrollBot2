@@ -47,7 +47,8 @@ async def on_message(message):
         await client.send_message(message.channel, random.choice(reply))    
 
     if message.content.upper().startswith("KYS") or message.content.upper().endswith("KYS"):
-        await client.send_message(message.channel, "That's rude, you're practically encouraging suicide")
+        x = ["So uncivilized...", "That's rude, you're practically encouraging suicide"]
+        await client.send_message(message.channel, random.choice(x))
 
     if message.content.upper().startswith("SMOKIN' THAT COOKIN' HOT POT") or message.content.upper().endswith("SMOKIN' THAT COOKIN' HOT POT"):
         words2 = ['Take the pot off the stove, you could start a fire noob', 'Smoking a hot pot will give you 3rd degree burns, are you ok?']
